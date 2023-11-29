@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ally</title>
+    <style>
+        .nav {
+            display: flex;
+            width: 100%;
+            height: 100px;
+        }
+        .reg{
+            background-color: #101010;
+            color: white;
+        }
+
+        .leftnav {
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            width: 60%;
+            height: 100%;
+
+        }
+
+        .rightnav {
+            display: flex;
+            align-items: center;
+            width: 40%;
+            background-color: black;
+            height: 100%;
+
+        }
+
+        .box {
+            width: 100%;
+
+            display: flex;
+        }
+
+        .left {
+            width: 60%;
+            height: 100%;
+        }
+
+        .right {
+            width: 40%;
+            height: 100%;
+            background-color: black;
+
+
+        }
+
+        .img {
+            margin-left: -250px;
+            width: 850px;
+            height: 696px;
+
+            position: relative;
+        }
+
+        .logo {
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .btn {
+
+            padding: 10px;
+            background-color: yellow;
+            font-weight: bolder;
+            border-radius: 10px;
+            margin-left: 300px;
+        }
+
+        .line {
+            width: 250px;
+            margin-top: 97px;
+            margin-left: 16%;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(15deg);
+
+        }
+
+        .line1 {
+            width: 170px;
+            margin-top: 50px;
+            margin-left: 17%;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+
+        .line2 {
+            width: 300px;
+            margin-top: 155px;
+            margin-left: 13%;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+
+        .line3 {
+            width: 370px;
+            margin-top: 229px;
+            margin-left: 12%;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(15deg);
+
+        }
+
+        .discover {
+            color: #101010;
+
+            font-family: Neometric;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+
+        }
+
+        .home {
+            width: 80%;
+            margin: auto;
+
+        }
+
+        .education {
+            color: #101010;
+            font-family: Neometric;
+            font-size: 75px;
+            font-style: normal;
+            font-weight: 600;
+
+        }
+
+        .btn2>button {
+            padding: 10px;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .box2 {
+            width: 100%;
+            display: flex;
+            background: linear-gradient(270deg, #FFF 10.43%, rgba(217, 217, 217, 0.00) 104.56%);
+            height: 550px;
+        }
+
+        .boxleft {
+
+            background-image: url(./img/bridge.png);
+            width: 60%;
+            height: 100%;
+        }
+
+        .boxright {
+            width: 40%;
+            height: 100%;
+        }
+
+        .why {
+            width: 90%;
+            margin: auto;
+            height: 100%;
+        }
+
+        .whyhead {
+            color: #101010;
+            text-align: center;
+            font-family: Neometric;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .number {
+            color: #DDF247;
+            font-family: Neometric;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .whyp {
+            color: #101010;
+            font-family: Neometric;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .system {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .box3 {
+            background: #FFF;
+            align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box4 {
+            background: linear-gradient(270deg, #F8F8F8 0%, rgba(248, 248, 248, 0.00) 12.56%);
+            width: 100%;
+            height: 495px;
+            display: flex;
+        }
+
+        .box4left {
+            width: 40%;
+            height: 100%;
+        }
+
+        .box4left>div {
+            width: 80%;
+            margin: auto;
+            text-align: left;
+        }
+
+        .box4right {
+            width: 60%;
+            height: 100%;
+        }
+
+        .btn3 {
+            padding: 10px;
+            width: 200px;
+            border-radius: 10px;
+            background-color: #101010;
+            color: white;
+        }
+
+        .box7 {
+            width: 100%;
+            margin: auto;
+            height: 400px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #f4f4f4;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 630px;
+            overflow: hidden;
+        }
+
+        .card-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card-content>h1 {
+            color: rgb(136, 136, 26);
+        }
+
+        .card {
+
+            min-width: calc(600px / 3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+
+
+        .btn-container {
+            margin-left: 200px;
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn4 {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .box5 {
+            background: #DDF247;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 300px;
+            align-items: center;
+        }
+
+        .box5>p {
+            width: 50%;
+        }
+
+        .top {
+            color: #101010;
+            font-family: Neometric;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .speak {
+
+
+            text-align: center;
+
+
+            color: #101010;
+            font-family: Neometric;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .box5div {
+            width: 492px;
+            height: 86px;
+            border-radius: 10px;
+            background: #FFF;
+        }
+
+        .box6 {
+            display: flex;
+            width: 100%;
+            height: 630px;
+        }
+
+        .box6>div {
+            width: 50%;
+            height: 100%;
+        }
+
+        .box6left {
+            background-color: black;
+        }
+
+        .imgboy {
+            position: relative;
+            width: 1500px;
+            height: 600px;
+        }
+
+        .we {
+            width: 90%;
+            margin: auto;
+        }
+
+        .you {
+
+            width: 314px;
+            height: 71px;
+            text-align: center;
+            align-items: center;
+            border-radius: 10px;
+            background: #DDF247;
+        }
+
+        .next {
+
+            margin-top: 20px;
+
+            color: #101010;
+            font-family: Neometric;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .university {
+            display: flex;
+
+            justify-content: space-around;
+        }
+
+        .choose {
+            margin-top: -50px;
+        }
+
+        .box4right {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #f2f2f2;
+        }
+
+        #slider-container2 {
+            position: relative;
+            width: 430px;
+            overflow: hidden;
+        }
+
+        #card-slider2 {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card2 {
+            border: 1px solid black;
+            box-sizing: border-box;
+            width: 800px;
+            padding: 20px;
+
+            border-radius: 8px;
+            background-color: #fff;
+            margin-right: 20px;
+        }
+
+        #prev-btn,
+        #next-btn {
+
+
+            transform: translateY(-50%);
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin-top: 50px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        #prev-btn {
+            left: 0;
+
+        }
+
+        #next-btn {
+            right: 0;
+        }
+
+        .footer {
+            width: 100%;
+            height: 250px;
+            color: white;
+            background-color: #101010;
+        }
+
+        .flogo {
+            color: #FFF;
+            text-align: center;
+            font-family: Neometric;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .copywrite {
+            display: flex;
+
+            justify-content: space-around;
+        }
+
+        .copywrite>p {
+            color: #FFF;
+            font-family: Neometric;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration-line: underline;
+        }
+
+
+        @media only screen and (max-width: 1150px) {
+            body {
+                overflow-y: none;
+                background-color: lightblue;
+            }
+
+            .line {
+                width: 250px;
+                margin-top: 97px;
+                margin-left: 6%;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+
+            .line1 {
+                width: 170px;
+                margin-top: 50px;
+                margin-left: 6%;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(-10deg);
+            }
+
+            .line2 {
+                width: 300px;
+                margin-top: 155px;
+                margin-left: 2%;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(-10deg);
+            }
+
+            .line3 {
+                width: 370px;
+                margin-top: 229px;
+                margin-left: 1%;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+
+            .img {
+                margin-left: -200px;
+                width: 650px;
+                height: 696px;
+
+                position: relative;
+            }
+
+           
+            .box6 {
+            display: block;
+            width: 100%;
+            height: 1300px;
+        }
+
+        .box6>div {
+            width: 100%;
+            height: 50%;
+        }
+
+        .box6left {
+            background-color: black;
+        }
+
+        .imgboy {
+            position: relative;
+            width: 900px;
+            height: 500px;
+        }
+        .box5div {
+            width: 302px;
+            height: 86px;
+            border-radius: 10px;
+            background: #FFF;
+        }
+
+        }
+
+        @media only screen and (max-width: 1150px) {
+            .img {
+                margin-left: -230px;
+                width: 650px;
+                height: 696px;
+
+                position: relative;
+            }
+
+            .btn {
+
+                padding: 10px;
+                background-color: yellow;
+                font-weight: bolder;
+                border-radius: 10px;
+                margin-left: 200px;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .box {
+                width: 100%;
+
+                display: block;
+            }
+            .imgboy {
+            position: relative;
+            width: 700px;
+            height: 500px;
+        }
+
+            .left {
+                width: 100%;
+
+            }
+
+            .right {
+                width: 100%;
+
+                background-color: black;
+
+
+            }
+
+            .img {
+
+                width: 100%;
+                height: 696px;
+                margin-left: 0px;
+                position: relative;
+            }
+
+            .line {
+                width: 340px;
+                margin-top: 111px;
+                margin-left: 389px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+
+            .line1 {
+                width: 200px;
+                margin-top: 50px;
+                margin-left: 400px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(-10deg);
+            }
+
+            .line2 {
+                width: 340px;
+                margin-top: 184px;
+                margin-left: 394px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(-10deg);
+            }
+
+            .line3 {
+                width: 399px;
+                margin-top: 265px;
+                margin-left: 383px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .line {
+                width: 300px;
+                margin-top: 111px;
+                margin-left: 349px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+
+            .line1 {
+                width: 200px;
+                margin-top: 50px;
+                margin-left: 350px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(-10deg);
+            }
+
+            .line2 {
+                width: 340px;
+                margin-top: 184px;
+                margin-left: 304px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(-10deg);
+            }
+
+            .line3 {
+                width: 399px;
+                margin-top: 265px;
+                margin-left: 303px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+            .box3 {
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 768px) {
+           
+
+            .line {
+                width: 230px;
+                margin-top: 101px;
+                margin-left: 269px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+            .imgboy {
+            position: relative;
+            width: 600px;
+            height: 500px;
+        }
+
+            .btn {
+
+                padding: 10px;
+                background-color: yellow;
+                font-weight: bolder;
+                border-radius: 10px;
+                margin-left: 100px;
+            }
+              .line1 {
+            width: 180px;
+            margin-top: 50px;
+            margin-left: 270px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+
+        .line2 {
+            width: 250px;
+            margin-top: 154px;
+            margin-left: 254px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+
+        .line3 {
+            width: 300px;
+            margin-top: 225px;
+            margin-left: 253px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(15deg);
+
+        }
+        .box2 {
+            width: 100%;
+            display: block;
+            background: linear-gradient(270deg, #FFF 10.43%, rgba(217, 217, 217, 0.00) 104.56%);
+            height: 1100px;
+        }
+
+        .boxleft {
+
+            
+            width: 100%;
+            height: 50%;
+        }
+
+        .boxright {
+            width: 100%;
+            height: 50%;
+        }
+
+        .box4 {
+            background: linear-gradient(270deg, #F8F8F8 0%, rgba(248, 248, 248, 0.00) 12.56%);
+            width: 100%;
+            height: 1000px;
+            display: block;
+        }
+
+        .box4left {
+            width: 100%;
+            height: 50%;
+        }
+
+        .box4left>div {
+            width: 80%;
+            margin: auto;
+            text-align: left;
+        }
+
+        .box4right {
+            width: 100%;
+            height: 50%;
+        }
+
+        .box5 {
+            background: #DDF247;
+            display: block;
+            width: 100%;
+            height: 500px;
+            align-items: center;
+        }
+
+        .box5>p {
+            width: 100%;
+        }
+        }
+
+      
+        
+
+        @media only screen and (max-width: 578px) {
+            .line {
+                width: 230px;
+                margin-top: 101px;
+                margin-left: 199px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+            .imgboy {
+            position: relative;
+            width: 400px;
+            height: 500px;
+        }
+            .btn {
+
+padding: 10px;
+background-color: yellow;
+font-weight: bolder;
+border-radius: 10px;
+margin-left: 50px;
+}
+
+.box5div {
+    margin-left: 30px;
+            width: 392px;
+            height: 86px;
+            border-radius: 10px;
+            background: #FFF;
+        }
+
+
+
+            .line1 {
+                width: 180px;
+                margin-top: 50px;
+                margin-left: 200px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(-10deg);
+            }
+
+            .line2 {
+                width: 250px;
+                margin-top: 154px;
+                margin-left: 184px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(-10deg);
+            }
+
+            .line3 {
+                width: 250px;
+                margin-top: 225px;
+                margin-left: 183px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+            .box2 {
+            width: 100%;
+            display: block;
+            background: linear-gradient(270deg, #FFF 10.43%, rgba(217, 217, 217, 0.00) 104.56%);
+            height: 1250px;
+        }
+        }
+        @media only screen and (max-width: 460px) {
+            .line {
+                width: 200px;
+                margin-top: 101px;
+                margin-left: 159px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+            .university {
+            display: block;
+
+            justify-content: space-around;
+        }
+            .imgboy {
+            position: relative;
+            width: 300px;
+            height: 500px;
+        }
+
+            .btn {
+
+                padding: 10px;
+                background-color: yellow;
+                font-weight: bolder;
+                border-radius: 10px;
+                margin-left: 30px;
+            }
+              .line1 {
+            width: 150px;
+            margin-top: 50px;
+            margin-left: 160px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+
+        .line2 {
+            width: 200px;
+            margin-top: 154px;
+            margin-left: 154px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+
+        .line3 {
+            width: 200px;
+            margin-top: 205px;
+            margin-left: 153px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(15deg);
+
+        }
+        .box2 {
+            width: 100%;
+            display: block;
+            background: linear-gradient(270deg, #FFF 10.43%, rgba(217, 217, 217, 0.00) 104.56%);
+            height: 1200px;
+        }
+
+        .boxleft {
+
+            
+            width: 100%;
+            height: 50%;
+        }
+
+        .boxright {
+            width: 100%;
+            height: 50%;
+        }
+
+        .box4 {
+            background: linear-gradient(270deg, #F8F8F8 0%, rgba(248, 248, 248, 0.00) 12.56%);
+            width: 100%;
+            height: 1000px;
+            display: block;
+        }
+
+        .box4left {
+            width: 100%;
+            height: 50%;
+        }
+
+        .box4left>div {
+            width: 80%;
+            margin: auto;
+            text-align: left;
+        }
+
+        .box4right {
+            width: 100%;
+            height: 50%;
+        }
+
+        .box5 {
+            background: #DDF247;
+            display: block;
+            width: 100%;
+            height: 500px;
+            align-items: center;
+        }
+
+        .box5>p {
+            width: 100%;
+        }
+        .box {
+            width: 100%;
+
+            display: block;
+        }
+
+        
+
+        .img {
+            margin-left: -110px;
+            width: 500px;
+            height: 496px;
+
+            position: relative;
+        }
+        .box5div {
+            width: 302px;
+            height: 86px;
+            border-radius: 10px;
+            background: #FFF;
+        }
+        .box6 {
+            display: block;
+            width: 100%;
+            height: 2000px;
+        }
+        
+        }
+        @media only screen and (max-width: 410px) {
+            .line {
+                width: 150px;
+                margin-top: 101px;
+                margin-left: 99px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                transform: rotate(15deg);
+
+            }
+
+        
+              .line1 {
+            width: 100px;
+            margin-top: 50px;
+            margin-left: 100px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+
+        .line2 {
+            width: 170px;
+            margin-top: 136px;
+            margin-left: 86px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+
+        .line3 {
+            width: 180px;
+            margin-top: 185px;
+            margin-left: 83px;
+            height: 30px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(15deg);
+
+        }
+        
+        .img {
+            margin-left: -90px;
+            width: 400px;
+            height: 446px;
+
+            position: relative;
+        }
+        .box5 {
+            background: #DDF247;
+            display: block;
+            width: 100%;
+            height: 550px;
+            align-items: center;
+        }
+        .education {
+            color: #101010;
+            font-family: Neometric;
+            font-size: 55px;
+            font-style: normal;
+            font-weight: 500;
+
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="leftnav ">
+            <h2 class="logo">Logo</h2>
+            <h4>Home</h4>
+            <h4>Why us</h4>
+            <h4>Testimonials</h4>
+        </div>
+        <div class="rightnav">
+            <button class="btn">Talk to us</button>
+        </div>
+
+    </div>
+    <div class="box">
+        <div class="left">
+
+            <div class="home">
+                <p class="discover">Discover the land of endless possibilities</p>
+                <p class="education">Discover Your
+                    Dream Education
+                    and Career in Australia!</p>
+                <p class="discover">Our website offers a comprehensive guide to help you navigate
+                    the process of studying and working in Australia.</p>
+                <div class="btn2">
+                    <button class="reg">Register Now</button>
+                    <button>Schedule a Call</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+
+            <div>
+                <div class="line1"></div>
+                <div class="line"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <img class="img" src="./img/Girl Image.png" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="box2">
+        <div class="boxleft">
+            <!-- <img width="100%" height="100%" src="./img/bridge.png" alt=""> -->
+        </div>
+        <div class="boxright">
+            <div class="why">
+                <p class="whyhead">Why choose Australia?</p>
+                <div class="system">
+                    <span class="number">1.</span> <span class="whyp">Home to premier institutions
+                        & a world class higher education system</span>
+                </div>
+                <div class="system">
+                    <span class="number">2.</span> <span class="whyp">Universities focus on practical learning
+                        & research opportunities</span>
+                </div>
+                <div class="system">
+                    <span class="number">3.</span> <span class="whyp">Known for its friendly & inclusive multi-cultural
+                        environment</span>
+                </div>
+                <div class="system">
+                    <span class="number">4.</span> <span class="whyp">Provides part time work opportunities while
+                        studying to get practical experience</span>
+                </div>
+                <div class="system">
+                    <span class="number">5.</span> <span class="whyp">Popular for its high standard of living & unique
+                        outdoor experiences</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="box3">
+        <img width="259px" height="120px" src="./img/ACU 1.png" alt="">
+        <img width="246px" height="232px" src="./img/charles_sturt_uni_7ba95151d7 1.png" alt="">
+        <img width="346px" height="108px" src="./img/pihms-logo-transparent 1.png" alt="">
+        <img width="169px" height="169px" src="./img/1200px-Deakin_University_Logo_2017 1.png" alt="">
+        <img width="326px" height="99px" src="./img/JCU-horizontal 1.png" alt="">
+    </div>
+    <div class="box4">
+        <div class="box4left">
+            <div>
+                <p style="text-align: left;" class="whyhead">Your dream future in Austrlia is just 5 steps away.</p>
+                <p class="whyp">Here's how we makes it simple for you</p>
+                <button class="btn3">Register Now</button>
+            </div>
+
+        </div>
+        <div class="box4right">
+            <div id="slider-container2">
+                <div id="card-slider2">
+                    <div class="card2">Get Your profile assessed by our expert team of counsellars.</div>
+                    <div class="card2">Get Your profile assessed by our expert team of counsellars.</div>
+                    <div class="card2">Get Your profile assessed by our expert team of counsellars.</div>
+                    <div class="card2">Get Your profile assessed by our expert team of counsellars.</div>
+                    <div class="card2">Get Your profile assessed by our expert team of counsellars.</div>
+                    <div class="card2">Get Your profile assessed by our expert team of counsellars.</div>
+                    <div class="card2">Get Your profile assessed by our expert team of counsellars.</div>
+                    <div class="card2">Get Your profile assessed by our expert team of counsellars.</div>
+
+                </div>
+
+                <div>
+                    <button id="prev-btn" onclick="prevCard2()">Prev</button>
+                    <button id="next-btn" onclick="nextCard2()">Next</button>
+                </div>
+            </div>
+
+            <!-- <div class="slider-container">
+                <div class="card-slider">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3> 1</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3> 2</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3> 3</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3> 4</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="card-content">
+                            <h3> 5</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="card-content">
+                            <h3> 6</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="card-content">
+                            <h3> 7</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="card-content">
+                            <h3> 8</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="card-content">
+                            <h3> 9</h3>
+                            <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="btn-container">
+                    <button class="btn4" onclick="prevCard()"></button>
+                    <button class="btn4" onclick="nextCard()"></button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="box5">
+        <p class="top">Australian universities rank in the
+            World's Top 50 in various study areas.</p>
+        <div class="box5div">
+            <p class="speak">Speak to our counsellor</p>
+        </div>
+
+    </div>
+    <div class="box6">
+        <div class="box6left">
+            <div class="line1"></div>
+            <div class="line"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <img class="imgboy" src="./img/Boy Image.png" alt="">
+        </div>
+        <div>
+            <div class="we">
+                <p class="top">We’ve helped more than 55k students begin their journey!</p>
+                <div class="you">
+                    <p class="next">You could be the next</p>
+                </div>
+                <div class="university">
+                    <div>
+                        <p class="top">750+</p>
+                        <p class="choose">Universities to choose from</p>
+                    </div>
+                    <div>
+                        <p class="top">97.9%</p>
+                        <p class="choose">Visa Success rate</p>
+                    </div>
+                </div>
+                <div class="university">
+                    <div>
+                        <p class="top">Personalized</p>
+                        <p class="choose">counseling sessions with certified education consultants</p>
+                    </div>
+                    <div>
+                        <p class="top">Free services</p>
+                        <p class="choose">from application to enrollment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box7">
+        <div class="slider-container">
+            <div class="card-slider">
+                <div class="card">
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-content">
+                        <h1> "</h1>
+                        <p>Get Your profile assessed by our expert team of counsellars.</p>
+                        <h3>&star;
+                            &starf;
+                            &bigstar;
+                        </h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class="btn-container">
+                <button class="btn4" onclick="prevCard()"></button>
+                <button class="btn4" onclick="nextCard()"></button>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="footer">
+        <h3 class="flogo">Your logo here.</h3>
+        <div class="copywrite">
+            <p>Terms And Conditions</p>
+            <p>Copyright © 2023 AECC</p>
+            <p>Privacy Policy</p>
+            <p>Cookies</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const cardSlider = document.querySelector('.card-slider');
+    const cardWidth = document.querySelector('.card').offsetWidth;
+    const cardsInView = 3;
+    let currentIndex = 0;
+
+    function showCard(index) {
+        cardSlider.style.transform = `translateX(${-index * (cardWidth + 20)}px)`; // 20 is the margin-right of each card
+    }
+
+    function nextCard() {
+        currentIndex = Math.min(currentIndex + cardsInView, document.querySelectorAll('.card').length - cardsInView);
+        showCard(currentIndex);
+    }
+
+    function prevCard() {
+        currentIndex = Math.max(currentIndex - cardsInView, 0);
+        showCard(currentIndex);
+    }
+
+    const cardSlider2 = document.getElementById('card-slider2');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let currentIndex2 = 0;
+
+    function prevCard2() {
+        currentIndex2 = Math.max(currentIndex2 - 2, 0);
+        updateSlider();
+    }
+
+    function nextCard2() {
+        currentIndex2 = Math.min(currentIndex2 + 2, cardSlider2.children.length - 3);
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const translateValue = -currentIndex2 * 340; // Adjust the value based on card width and margin
+        cardSlider2.style.transform = `translateX(${translateValue}px)`;
+    }
+</script>
